@@ -23,4 +23,6 @@ export default defineConfig({
 			'@types': resolve(__dirname, 'src', 'types'),
 		},
 	},
+	envDir: resolve(__dirname, 'src', 'env'),
+	envPrefix: 'GB_',
 });

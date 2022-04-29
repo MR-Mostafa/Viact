@@ -3,6 +3,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import mkcert from 'vite-plugin-mkcert';
 import legacy from '@vitejs/plugin-legacy';
+import { visualizer } from 'rollup-plugin-visualizer';
+
+const shouldAnalyze = process.env.ANALYZE;
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +18,12 @@ export default defineConfig({
 			source: 'coding',
 		}),
 	],
+	build: {
+		rollupOptions: {
+			plugins: !!shouldAnalyze ? [visualizer({ filename: './dist/_stats.html' })] : [],
+		},
+		sourcemap: !!shouldAnalyze,
+	},
 	cacheDir: './.vite-cache',
 	resolve: {
 		alias: {

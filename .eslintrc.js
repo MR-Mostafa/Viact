@@ -21,26 +21,6 @@ module.exports = {
 		project: './tsconfig.eslint.json',
 	},
 	rules: {
-		'prettier/prettier': [
-			'error',
-			{
-				arrowParens: 'always',
-				bracketSpacing: true,
-				bracketSameLine: false,
-				endOfLine: 'auto',
-				htmlWhitespaceSensitivity: 'css',
-				insertPragma: false,
-				jsxSingleQuote: false,
-				printWidth: 140,
-				proseWrap: 'always',
-				quoteProps: 'consistent',
-				requirePragma: false,
-				semi: true,
-				singleQuote: true,
-				tabWidth: 3,
-				useTabs: true,
-				trailingComma: 'all',
-			},
-		],
+		'prettier/prettier': ['error', {}, { usePrettierrc: true }],
 	},
 };

@@ -6,7 +6,8 @@ import { resolve } from 'path';
 import { visualizer } from 'rollup-plugin-visualizer';
 import mkcert from 'vite-plugin-mkcert';
 
-const shouldAnalyze = process.env.ANALYZE;
+const shouldAnalyze = process.env.ANALYZE ?? false;
+const isHttps = process.env.HTTPS ?? false;
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -46,7 +47,7 @@ export default defineConfig({
 	envDir: resolve(__dirname, 'src', 'env'),
 	envPrefix: 'GB_',
 	server: {
-		https: true,
+		https: !!isHttps,
 		proxy: {
 			/**
 			 * When we use proxy API requests, we can get data from an external website that throws an error by default (if we don't use a proxy)

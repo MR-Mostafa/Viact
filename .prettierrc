@@ -14,5 +14,9 @@
 	"singleQuote": true,
 	"tabWidth": 3,
 	"useTabs": true,
-	"trailingComma": "all"
+	"trailingComma": "all",
+	"importOrder": ["^(^react$|@react|react|^recoil|redux|vite$)", "<THIRD_PARTY_MODULES>", "^@@(.*)$", "^[./]"],
+	"importOrderGroupNamespaceSpecifiers": true,
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
 }

@@ -1,4 +1,6 @@
 module.exports = {
+	parser: '@typescript-eslint/parser',
+	root: true,
 	settings: {
 		'import/resolver': {
 			node: {
@@ -7,19 +9,20 @@ module.exports = {
 			},
 		},
 	},
+	parserOptions: {
+		project: './tsconfig.eslint.json',
+	},
 	plugins: ['github', 'regexp'],
 	extends: [
 		'eslint:recommended',
 		'plugin:listeners/recommended',
 		'plugin:github/recommended',
-		'@fullstacksjs',
-		'@fullstacksjs/eslint-config/typecheck',
 		'plugin:regexp/recommended',
 		'plugin:security/recommended',
+		'@fullstacksjs',
+		'@fullstacksjs/eslint-config/typecheck',
 	],
-	parserOptions: {
-		project: './tsconfig.eslint.json',
-	},
+
 	rules: {
 		'prettier/prettier': ['error', {}, { usePrettierrc: true }],
 	},

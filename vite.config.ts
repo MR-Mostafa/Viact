@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { defineConfig } from 'vite';
 
 import legacy from '@vitejs/plugin-legacy';
@@ -5,26 +6,55 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { visualizer } from 'rollup-plugin-visualizer';
 import mkcert from 'vite-plugin-mkcert';
+import svgr from 'vite-plugin-svgr';
+
+const { dependencies } = require('./package.json');
 
 const shouldAnalyze = process.env.ANALYZE ?? false;
 const isHttps = process.env.HTTPS ?? false;
+
+function renderChunks(deps) {
+	let chunks = {};
+
+	Object.keys(deps).forEach((key) => {
+		if (['react', 'react-router-dom', 'react-dom'].includes(key)) return;
+
+		chunks[key] = [key];
+	});
+
+	return chunks;
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
 		react(),
-		legacy({
-			targets: ['defaults', 'not IE 11'],
-		}),
+		// legacy(),
+		svgr(),
 		mkcert({
 			source: 'coding',
 		}),
 	],
 	build: {
+		target: 'es2018',
 		rollupOptions: {
 			plugins: !!shouldAnalyze ? [visualizer({ filename: './dist/_stats.html' })] : [],
+			output: {
+				manualChunks: {
+					'react-vendor': ['react', 'react-router-dom', 'react-dom'],
+					...renderChunks(dependencies),
+				},
+			},
 		},
 		sourcemap: !!shouldAnalyze,
+	},
+	css: {
+		devSourcemap: true,
+		preprocessorOptions: {
+			less: {
+				javascriptEnabled: true,
+			},
+		},
 	},
 	cacheDir: './.vite-cache',
 	resolve: {

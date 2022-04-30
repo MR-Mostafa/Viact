@@ -3,8 +3,8 @@
 	"private": true,
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite",
-		"dev:secure": "set HTTPS=true && vite",
+		"dev": "set HTTPS=true && vite",
+		"dev:http": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"analyze": "set ANALYZE=true && yarn run build",

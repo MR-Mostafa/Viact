@@ -15,7 +15,14 @@
 	"tabWidth": 3,
 	"useTabs": true,
 	"trailingComma": "all",
-	"importOrder": ["^(^react$|@react|react|^recoil|redux|vite$)", "<THIRD_PARTY_MODULES>", "^@@(.*)$", "^[./]"],
+	"importOrder": [
+		"^(^react$|^@react|^react|^recoil|redux|vite)",
+		"^(^antd|^rsuite|^@emotion|^emotion|theme-ui|^semantic-ui|^@rebass|^@chakra-ui|bootstrap|tailwind|bulma|mui|^@blueprintjs|reactstrap)",
+		"<THIRD_PARTY_MODULES>",
+		"^@(.*)$",
+		"^~(.*)$",
+		"^[./]"
+	],
 	"importOrderGroupNamespaceSpecifiers": true,
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true

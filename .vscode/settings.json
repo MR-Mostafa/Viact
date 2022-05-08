@@ -1,0 +1,62 @@
+{
+	"files.autoSave": "off",
+	"editor.codeActionsOnSave": {
+		"source.fixAll": false,
+		"source.fixAll.eslint": true, // this allows ESLint to auto fix on save
+		"source.organizeImports": false
+	},
+	"editor.rulers": [120],
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.simpleDialog.enable": true,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 110,
+	"eslint.format.enable": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": false,
+	"editor.autoClosingBrackets": "always",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"files.exclude": {
+		".vscode": true,
+		".vite-cache": true,
+		"postcss": true,
+		"dist": true,
+		"build": true,
+		"**/node_modules/": true,
+		"**/package-lock.json": true,
+		"**/yarn.lock": true,
+		".editorconfig": true,
+		".gitignore": true,
+		".stackblitzrc": true,
+		".stylelintrc.json": true,
+		".gitkeep": true,
+		"**/.gitkeep": true
+	},
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact",
+		"vue",
+		"html",
+		"markdown",
+		"json",
+		"jsonc",
+		"json5"
+	],
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"typescript": "typescriptreact"
+	},
+	"emmet.syntaxProfiles": {
+		"javascript": ["jsx", "html"]
+	},
+	"emmet.showExpandedAbbreviation": "always",
+	"github.copilot.enable": {
+		"*": true,
+		"markdown": true,
+		"plaintext": false,
+		"yaml": false
+	}
+}

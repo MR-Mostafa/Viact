@@ -1,0 +1,116 @@
+{
+	"name": "viact",
+	"private": true,
+	"version": "1.0.0",
+	"description": "Viact is a starter template for React TypeScript using Vitejs, which supports RTL for specific styles. Additionally, Is set up VScode, Storybook, UnoCss (atomic CSS engine), Eslint, Prettier, and more.",
+	"author": {
+		"name": "Mostafa Rahmati",
+		"url": "https://github.com/MR-Mostafa"
+	},
+	"engines": {
+		"node": ">=16",
+		"npm": ">=8",
+		"yarn": ">=1"
+	},
+	"keywords": [
+		"starter template",
+		"starter template vite react",
+		"react vite",
+		"react",
+		"vite",
+		"rtl vite",
+		"rtl",
+		"vite rtl",
+		"vite starter",
+		"vite starter template",
+		"vite starter template react",
+		"vite-template",
+		"viact",
+		"typescript",
+		"typescript vite",
+		"typescript vite react",
+		"typescript react",
+		"typescript react vite",
+		"unocss",
+		"unocss vite",
+		"boilerplate",
+		"boilerplate vite",
+		"vite boilerplate",
+		"boilerplate vite react",
+		"boilerplate react",
+		"boilerplate react vite"
+	],
+	"packageManager": "yarn@1.22.17",
+	"main": "./src/main.tsx",
+	"scripts": {
+		"dev": "cross-env DEBUG=vite:plugin:mkcert HTTPS=true vite",
+		"dev:http": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"analyze": "cross-env ANALYZE=true yarn run build",
+		"mock:server": "json-server --watch ./mock/index.json --config ./mock/config.json"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/MR-Mostafa/viact",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MR-Mostafa/viact.git"
+	},
+	"bugs": {
+		"url": "https://github.com/MR-Mostafa/viact/issues"
+	},
+	"dependencies": {
+		"react": "^18.1.0",
+		"react-dom": "^18.1.0",
+		"react-router-dom": "^6.3.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^16.2.4",
+		"@commitlint/config-conventional": "^16.2.4",
+		"@fullstacksjs/eslint-config": "^8.4.3",
+		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
+		"@types/react": "^18.0.9",
+		"@types/react-dom": "^18.0.3",
+		"@typescript-eslint/parser": "^5.22.0",
+		"@unocss/vite": "^0.33.1",
+		"@vitejs/plugin-legacy": "^1.8.2",
+		"@vitejs/plugin-react": "^1.3.2",
+		"autoprefixer": "^10.4.7",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.15.0",
+		"eslint-plugin-github": "^4.3.6",
+		"eslint-plugin-regexp": "^1.7.0",
+		"eslint-plugin-security": "^1.5.0",
+		"json-server": "^0.17.0",
+		"less": "^4.1.2",
+		"postcss": "^8.4.13",
+		"prettier": "^2.6.2",
+		"rollup-plugin-visualizer": "^5.6.0",
+		"rtlcss": "^3.5.0",
+		"sass": "^1.51.0",
+		"stylelint": "^14.8.2",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-recess-order": "^3.0.0",
+		"stylelint-config-standard": "^25.0.0",
+		"stylelint-config-standard-scss": "^3.0.0",
+		"typescript": "^4.6.4",
+		"unocss": "^0.33.1",
+		"vite": "^2.9.8",
+		"vite-plugin-imagemin": "^0.6.1",
+		"vite-plugin-mkcert": "^1.6.0",
+		"vite-plugin-svgr": "^1.1.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.5%",
+			"last 10 versions",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

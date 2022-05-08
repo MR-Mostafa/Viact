@@ -1,0 +1,16 @@
+{
+	"recommendations": [
+		"GitHub.copilot",
+		"EditorConfig.EditorConfig",
+		"eamodio.gitlens",
+		"kamikillerto.vscode-colorize",
+		"usernamehw.errorlens",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"antfu.unocss",
+		"mhutchie.git-graph",
+		"wix.vscode-import-cost",
+		"oderwat.indent-rainbow",
+		"PKief.material-icon-theme"
+	]
+}

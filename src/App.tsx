@@ -1,9 +1,7 @@
-function App() {
+function App(): JSX.Element {
 	return (
-		<div className='App'>
-			<h1>
-				Hello <abbr title='Vitejs config for react'>Vitact</abbr>
-			</h1>
+		<div>
+			<h1 className="ta[center] p[2rem_1rem]">Under Construction</h1>
 		</div>
 	);
 }

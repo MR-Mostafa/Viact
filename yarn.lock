@@ -985,7 +985,7 @@
     "@svgr/babel-plugin-transform-react-native-svg" "^6.0.0"
     "@svgr/babel-plugin-transform-svg-component" "^6.2.0"
 
-"@svgr/core@^6.2.0":
+"@svgr/core@^6.2.1":
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/@svgr/core/-/core-6.2.1.tgz#195de807a9f27f9e0e0d678e01084b05c54fdf61"
   integrity sha512-NWufjGI2WUyrg46mKuySfviEJ6IxHUOm/8a3Ph38VCWSp+83HBraCQrpEM3F3dB6LBs5x8OElS8h3C0oOJaJAA==
@@ -7666,12 +7666,12 @@ vite-plugin-mkcert@^1.6.0:
     debug "^4.3.3"
     picocolors "^1.0.0"
 
-vite-plugin-svgr@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-svgr/-/vite-plugin-svgr-1.1.0.tgz#75b0e1eb55acadb8ab2666b736e9d1428887326f"
-  integrity sha512-fuwfRpUoMBX3wr47JVt4b4xpMYujONDGyDwZFE4JuohVTJovJ4VCNeAb3//mzdRxdzeHEfJuedpoHTvwPsqisA==
+vite-plugin-svgr@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-svgr/-/vite-plugin-svgr-2.1.0.tgz#cd66862da737949383e6d8f12d981958b9a65cc5"
+  integrity sha512-3J19p8pmGfRt297yvc8Fd36+0AC0sLgA/gZYQDjotNAhv3CmSTQyviXIrDbwiRFVrsZjSlHJH1vca7OGFmjDcA==
   dependencies:
-    "@svgr/core" "^6.2.0"
+    "@svgr/core" "^6.2.1"
 
 vite@^2.9.8:
   version "2.9.8"

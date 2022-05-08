@@ -98,7 +98,7 @@
 		"vite": "^2.9.8",
 		"vite-plugin-imagemin": "^0.6.1",
 		"vite-plugin-mkcert": "^1.6.0",
-		"vite-plugin-svgr": "^1.1.0"
+		"vite-plugin-svgr": "^2.1.0"
 	},
 	"browserslist": {
 		"production": [

@@ -1,0 +1,15 @@
+*[class*='after:'] {
+	&::after {
+		content: '';
+	}
+}
+
+*[class*='before:'] {
+	&::before {
+		content: '';
+	}
+}
+
+*[class*='hover:'] {
+	cursor: pointer;
+}

@@ -11,6 +11,7 @@
 		"mhutchie.git-graph",
 		"wix.vscode-import-cost",
 		"oderwat.indent-rainbow",
-		"PKief.material-icon-theme"
+		"PKief.material-icon-theme",
+		"styled-components.vscode-styled-components"
 	]
 }

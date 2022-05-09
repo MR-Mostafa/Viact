@@ -33,7 +33,8 @@
 			"~pages/*": ["src/pages/*"],
 			"~constants/*": ["src/constants/*"],
 			"~containers/*": ["src/containers/*"],
-			"~types/*": ["src/types/*"]
+			"~types/*": ["src/types/*"],
+			"~sections/*": ["src/sections/*"]
 		}
 	},
 	"include": ["src"],

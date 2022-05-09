@@ -113,6 +113,7 @@ export default defineConfig((mode) => {
 				'~constants': resolve(__dirname, 'src', 'constants'),
 				'~containers': resolve(__dirname, 'src', 'containers'),
 				'~types': resolve(__dirname, 'src', 'types'),
+				'~sections': resolve(__dirname, 'src', 'sections'),
 			},
 		},
 		envDir: resolve(__dirname, 'src', 'env'),

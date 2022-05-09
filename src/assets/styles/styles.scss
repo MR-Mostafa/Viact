@@ -2,3 +2,36 @@
  * Global styles
 */
 @import './utils/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	background-color: #111111ed;
+	font-size: 1rem;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	font-size: inherit;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}

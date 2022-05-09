@@ -258,10 +258,12 @@ const acss = {
 	'h': 'height',
 	'max-w': 'max-width',
 	'maw': 'max-width',
+	'mw': 'max-width',
 	'min-w': 'min-width',
 	'miw': 'min-width',
 	'max-h': 'max-height',
 	'mah': 'max-height',
+	'mh': 'max-height',
 	'min-h': 'min-height',
 	'mih': 'min-height',
 

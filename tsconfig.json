@@ -18,7 +18,7 @@
 		"noEmit": true,
 		"jsx": "react-jsx",
 		"sourceMap": true,
-		"baseUrl": "src",
+		"baseUrl": ".",
 		"types": ["vite-plugin-svgr/client"],
 		"paths": {
 			"~src/*": ["src/*"],

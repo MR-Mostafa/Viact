@@ -58,5 +58,6 @@
 		"markdown": true,
 		"plaintext": false,
 		"yaml": false
-	}
+	},
+	"commitlint.config.file": "./commitlint.config.js"
 }

@@ -64,6 +64,7 @@
 	"dependencies": {
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
+		"react-error-boundary": "^3.1.4",
 		"react-router-dom": "^6.3.0"
 	},
 	"devDependencies": {

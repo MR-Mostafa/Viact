@@ -16,7 +16,7 @@ const setUnits = (cssProperty: string, unit: string): string => {
 	 * 	Some of CSS properties are just numbers, and there is no unit requirement (like rem,px,...)
 	 * 	like opacity, font-weight, etc.
 	 */
-	if (['opacity', 'font-weight'].includes(cssProperty)) return unit;
+	if (['opacity', 'font-weight', 'line-height'].includes(cssProperty)) return unit;
 
 	/**
 	 * @description

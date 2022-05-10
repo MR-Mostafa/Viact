@@ -15,7 +15,7 @@ const Counter = ({ start = 0 }: ICounterProps) => {
 	const handleDecrement = () => setCount(count - 1);
 
 	return (
-		<div className="counter d-[flex] js-[center] ai-[center] @.counter_button$fs-[50px] @.counter_button:active$op-[0.8] @.counter_svg$trs-[fill_0.15s_ease-in-out] pt-[3rem] us-[none]">
+		<div className="counter d-[flex] js-[center] ai-[center] @.counter_button$fs-[50px] @.counter_button:active$op-[0.8] @.counter_svg$trs-[fill_0.15s_ease-in-out] us-[none]">
 			<button className="btn-plus bg-[transparent] @.btn-plus:hover_svg$fill-[#5393ff] h-[50px]" onClick={handleIncrement}>
 				<PlusIcon className="icon fill-[#2979ff]" />
 			</button>

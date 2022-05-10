@@ -4,6 +4,18 @@
 @import './utils/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+@keyframes body {
+	to {
+		background-position: 50px 0, 125px 25px;
+	}
+}
+
+@keyframes viact {
+	40% {
+		transform: translateY(25px) rotate(-5deg);
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -20,10 +32,23 @@ body {
 	background-color: #111111ed;
 	font-size: 1rem;
 	font-family: Roboto, Arial, Helvetica, sans-serif;
+	background-image: radial-gradient(hsla(0, 0%, 84.3%, 0.2) 1px, transparent 0),
+		radial-gradient(hsla(0, 0%, 84.3%, 0.1) 1px, transparent 0);
+	background-size: 60px 60px;
+	background-position: 0 0, 30px 30px;
+	animation: body 5s linear infinite;
 }
 
 button {
 	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+#root {
+	min-height: 100vh;
 }
 
 .icon {
@@ -34,4 +59,8 @@ button {
 	stroke-width: 0;
 	stroke: currentColor;
 	fill: currentColor;
+}
+
+.viact-logo {
+	animation: viact 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }

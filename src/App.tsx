@@ -1,32 +1,30 @@
-import Counter from '~components/Counter';
-import { ReactComponent as GithubIcon } from '~images/github.svg';
+import { Route, Routes } from 'react-router-dom';
+
 import ViactImg from '~images/viact.png';
+import About from '~pages/About';
+import Home from '~pages/Home';
+import LearnMore from '~pages/LearnMore';
+import Footer from '~sections/Footer';
+import Header from '~sections/Header';
 
 function App(): JSX.Element {
 	return (
-		<div className="maw-[1200px] p-[1rem] mx-[auto]">
-			<header className="d-[flex] fld-[row] ai-[center] js-[space-between] pb-[0.5rem] mb-[1rem] bdb-[1px_dotted_#ffffff1a]">
-				<h1 className="c-[#ffffffcc] fw-[500]">Viact</h1>
+		<div className="maw-[1200px] p-[1rem] mx-[auto] min-h[100vh] d-[flex] fld-[column]">
+			<Header />
 
-				<a
-					href="https://github.com/MR-Mostafa/Viact"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="d-[inline-block] fs-[2.5rem] h-[1em]"
-				>
-					<GithubIcon className="icon fill-[rgb(41,182,246)]" />
-				</a>
-			</header>
+			<main className="py-[1.5rem]">
+				<div className="pb-[3.5rem]">
+					<img src={ViactImg} alt="viact logo" className="viact-logo d-[block] mw-[23vw] min-w-[300px] h-[auto] m-[auto]" />
+				</div>
 
-			<main className="pt-[2rem]">
-				<img src={ViactImg} alt="viact logo" className="d-[block] mw-[30vw] min-w-[300px] h-[auto] m-[auto]" />
-
-				<Counter start={0} />
-				<p>
-					<abbr title="Vite + React">Viact</abbr> is a starter template for React TypeScript that uses Vitejs, which supports RTL for
-					specific styles, proxy fetching API (to fix CORS errors) and a simple mock REST API server.
-				</p>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/learn" element={<LearnMore />} />
+				</Routes>
 			</main>
+
+			<Footer />
 		</div>
 	);
 }

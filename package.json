@@ -43,11 +43,12 @@
 	"packageManager": "yarn@1.22.17",
 	"main": "./src/main.tsx",
 	"scripts": {
-		"dev": "cross-env DEBUG=vite:plugin:mkcert HTTPS=true vite",
-		"dev:http": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview",
-		"analyze": "cross-env ANALYZE=true yarn run build",
+		"clean": "rimraf ./.vite-cache ./dist",
+		"dev": "yarn run clean && cross-env DEBUG=vite:plugin:mkcert HTTPS=true vite",
+		"dev:http": "yarn run clean && vite",
+		"build": "yarn run clean && tsc && vite build",
+		"preview": "yarn run clean && vite preview",
+		"analyze": "yarn run clean && cross-env ANALYZE=true yarn run build",
 		"mock:server": "json-server --watch ./mock/index.json --config ./mock/config.json",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"

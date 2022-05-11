@@ -31,3 +31,42 @@
 -  📕 [Storybook](https://storybook.js.org/)
 
 # Folder Structure
+
+<p>Simple folder structures, no configuration needed, just the files you need:</p>
+
+```
+Viact
+├── .storybook          # Storybook configuration
+├── .vite-cache         # Vite cache (for faster builds)
+├── .vscode             # VSCode configuration
+├── mock                # Full fake REST API server (Create a mock API server with `json-server`)
+├── node_modules        # Node modules
+├── postcss             # Postcss RTLCSS Plugin
+└── src                 # Your source code that will be compiled to dist folder
+|    ├── api
+|    ├── assets
+|    |    ├── fonts
+|    |    ├── images
+|    |    └── styles
+|    |        ├── utils                # Utility styles
+|    |        ├── styles.rtl.scss      # Global rtl styles
+|    |        └── styles.scss          # Global styles
+|    ├── components
+|    ├── constants
+|    ├── containers
+|    ├── env
+|    ├── pages
+|    ├── sections
+|    ├── store
+|    ├── types
+|    ├── utils
+|    ├── App.tsx
+|    ├── main.tsx
+|    └── Routes.tsx
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+├── vite.config.js
+...
+```

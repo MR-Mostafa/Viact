@@ -14,9 +14,9 @@ const setUnits = (cssProperty: string, unit: string): string => {
 	/**
 	 * @description
 	 * 	Some of CSS properties are just numbers, and there is no unit requirement (like rem,px,...)
-	 * 	like opacity, font-size, etc.
+	 * 	like opacity, font-weight, etc.
 	 */
-	if (['opacity', 'font-size'].includes(cssProperty)) return unit;
+	if (['opacity', 'font-weight', 'line-height'].includes(cssProperty)) return unit;
 
 	/**
 	 * @description
@@ -76,8 +76,8 @@ export default defineConfig({
 		/**
 		 * @description
 		 *  	1) In classNames, spaces cannot be used (because a new class has already been defined).
-		 * 	Therefore, the underscore(-) sign should be used instead of a space.
-		 * 	We will now replace the underscore(-) sign with a space.
+		 * 	Therefore, the underscore(_) sign should be used instead of a space.
+		 * 	We will now replace the underscore(_) sign with a space.
 		 * 	2) Add body wrapping to classNames (for CSS Specification)
 		 * 		{@link https://www.w3schools.com/css/css_specificity.asp}
 		 */

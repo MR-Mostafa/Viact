@@ -83,9 +83,7 @@ export default defineConfig((mode) => {
 			sourcemap: !!shouldAnalyze,
 		},
 		css: {
-			devSourcemap: (i) => {
-				console.log(i);
-			},
+			devSourcemap: true,
 			preprocessorOptions: {
 				less: {
 					javascriptEnabled: true,
@@ -96,6 +94,10 @@ export default defineConfig((mode) => {
 			},
 		},
 		cacheDir: './.vite-cache',
+
+		/**
+		 * defining aliases
+		 */
 		resolve: {
 			alias: {
 				'~src': resolve(__dirname, 'src'),
@@ -111,6 +113,7 @@ export default defineConfig((mode) => {
 				'~constants': resolve(__dirname, 'src', 'constants'),
 				'~containers': resolve(__dirname, 'src', 'containers'),
 				'~types': resolve(__dirname, 'src', 'types'),
+				'~sections': resolve(__dirname, 'src', 'sections'),
 			},
 		},
 		envDir: resolve(__dirname, 'src', 'env'),

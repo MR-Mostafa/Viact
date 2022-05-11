@@ -2,7 +2,7 @@
 	"name": "viact",
 	"private": true,
 	"version": "1.0.0",
-	"description": "Viact is a starter template for React TypeScript that uses Vitejs, which supports RTL for specific styles, proxy fetching API (to fix CORS errors) and a simple mock server. Additionally, Is set up VScode, Storybook, UnoCss (atomic CSS engine), Eslint, Prettier, and more.",
+	"description": "Viact is a starter template for React TypeScript that uses Vitejs, which supports RTL for specific styles, proxy fetching API (to fix CORS errors) and a simple mock REST API server. Additionally, Is set up VScode, Storybook, ErrorBoundary, UnoCss (atomic CSS engine), Eslint, Prettier, and more.",
 	"author": {
 		"name": "Mostafa Rahmati",
 		"url": "https://github.com/MR-Mostafa"
@@ -43,12 +43,18 @@
 	"packageManager": "yarn@1.22.17",
 	"main": "./src/main.tsx",
 	"scripts": {
-		"dev": "cross-env DEBUG=vite:plugin:mkcert HTTPS=true vite",
-		"dev:http": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview",
-		"analyze": "cross-env ANALYZE=true yarn run build",
-		"mock:server": "json-server --watch ./mock/index.json --config ./mock/config.json"
+		"reset:git": "rimraf .git && git init && git add . && git commit -m \"init commit\"",
+		"reset:vite": "rimraf ./.vite-cache ./dist",
+		"reset:file": "node ./clean.js",
+		"reset": "yarn run reset:vite && yarn run reset:file && yarn run reset:git",
+		"dev": "yarn run reset:vite && cross-env DEBUG=vite:plugin:mkcert HTTPS=true vite",
+		"dev:http": "yarn run reset:vite && vite",
+		"build": "yarn run reset:vite && tsc && vite build",
+		"preview": "yarn run build && vite preview",
+		"analyze": "yarn run reset:vite && cross-env ANALYZE=true yarn run build",
+		"mock:server": "json-server --watch ./mock/index.json --config ./mock/config.json",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
 	},
 	"license": "MIT",
 	"homepage": "https://github.com/MR-Mostafa/viact",
@@ -62,12 +68,21 @@
 	"dependencies": {
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
+		"react-error-boundary": "^3.1.4",
 		"react-router-dom": "^6.3.0"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.17.10",
 		"@commitlint/cli": "^16.2.4",
 		"@commitlint/config-conventional": "^16.2.4",
 		"@fullstacksjs/eslint-config": "^8.4.3",
+		"@storybook/addon-actions": "^6.4.22",
+		"@storybook/addon-essentials": "^6.4.22",
+		"@storybook/addon-interactions": "^6.4.22",
+		"@storybook/addon-links": "^6.4.22",
+		"@storybook/builder-vite": "^0.1.33",
+		"@storybook/react": "^6.4.22",
+		"@storybook/testing-library": "^0.0.11",
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
 		"@types/react": "^18.0.9",
 		"@types/react-dom": "^18.0.3",
@@ -76,6 +91,7 @@
 		"@vitejs/plugin-legacy": "^1.8.2",
 		"@vitejs/plugin-react": "^1.3.2",
 		"autoprefixer": "^10.4.7",
+		"babel-loader": "^8.2.5",
 		"cross-env": "^7.0.3",
 		"eslint": "^8.15.0",
 		"eslint-plugin-github": "^4.3.6",

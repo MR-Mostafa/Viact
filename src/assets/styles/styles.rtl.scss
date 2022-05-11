@@ -9,6 +9,7 @@
  * @example:
  *		1) @import 'bootstrap';
  *			this will import bootstrap styles with rtl support.
- *			.ps-3 {text-align: right;} ==> this will change the text-align to right in rtl mode.
+ *			.ps-3 { padding-left: 1rem!important;} ==>  .ps-3 { padding-right: 1rem!important;}
+ *			.text-end {text-align: right;} ==> this will change the text-align to left in rtl mode.
  *
 */

@@ -33,3 +33,8 @@ dist-ssr
 *.prproj
 *.aep
 *.xd
+
+# Other
+/postcss
+/postcss/*
+

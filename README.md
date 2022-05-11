@@ -115,10 +115,10 @@ Viact
 
 # UnoCSS
 Plese see this link for more information about UnoCSS:<br />
-[Unocss](https://github.com/unocss/unocss)<br />
-[Let’s Define Exactly What Atomic CSS is](https://css-tricks.com/lets-define-exactly-atomic-css/)<br />
-[Atomic CSS](https://acss.io/)<br />
-[Reimagine Atomic CSS](https://antfu.me/posts/reimagine-atomic-css)<br />
+- [Unocss](https://github.com/unocss/unocss)
+- [Let’s Define Exactly What Atomic CSS is](https://css-tricks.com/lets-define-exactly-atomic-css/)
+- [Atomic CSS](https://acss.io/)
+- [Reimagine Atomic CSS](https://antfu.me/posts/reimagine-atomic-css)
 ### The default CSS Preset (Atomic CSS Class)
 As you might know, Tailwind and Windi CSS transform specific class names in the HTML file (or in the JSX or TSX file) to specific property styles as you need them(on-demand). <br />
 A number of rules have been defined for the use of commonly used styles, Which is defined in the following file:
@@ -137,7 +137,7 @@ A number of rules have been defined for the use of commonly used styles, Which i
 - **For Group Selectors:**
 	- Group Selectors must start with @
 	- All selectors must end with dollar sign ($)
-	- The classname can only contain one dollar sign ($)
+	- The classname can only contain one dollar sign ($)<br />
 	**example:**
 	```
         space between

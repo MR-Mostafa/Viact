@@ -50,7 +50,7 @@
 		"dev": "yarn run reset:vite && cross-env DEBUG=vite:plugin:mkcert HTTPS=true vite",
 		"dev:http": "yarn run reset:vite && vite",
 		"build": "yarn run reset:vite && tsc && vite build",
-		"preview": "yarn run reset:vite && vite preview",
+		"preview": "yarn run build && vite preview",
 		"analyze": "yarn run reset:vite && cross-env ANALYZE=true yarn run build",
 		"mock:server": "json-server --watch ./mock/index.json --config ./mock/config.json",
 		"storybook": "start-storybook -p 6006",

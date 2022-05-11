@@ -76,8 +76,8 @@ export default defineConfig({
 		/**
 		 * @description
 		 *  	1) In classNames, spaces cannot be used (because a new class has already been defined).
-		 * 	Therefore, the underscore(-) sign should be used instead of a space.
-		 * 	We will now replace the underscore(-) sign with a space.
+		 * 	Therefore, the underscore(_) sign should be used instead of a space.
+		 * 	We will now replace the underscore(_) sign with a space.
 		 * 	2) Add body wrapping to classNames (for CSS Specification)
 		 * 		{@link https://www.w3schools.com/css/css_specificity.asp}
 		 */

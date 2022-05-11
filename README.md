@@ -30,6 +30,31 @@
 -  🔥 The easiest way to mock REST APIs! `json-server`
 -  📕 [Storybook](https://storybook.js.org/)
 
+# Prerequisites
+-  📦 [Node.js >=16](https://nodejs.org/)
+-  📦 [Yarn >=1](https://yarnpkg.com/)
+# Getting Started
+
+### GitHub Template
+
+[Create a repo from this template on GitHub.](https://github.com/MR-Mostafa/Viact/generate)
+
+### Clone to local
+
+<p>If you would prefer to do it manually, use the following:</p>
+
+```bash
+git clone https://github.com/MR-Mostafa/Viact.git
+cd Viact
+```
+
+<p>After that, follow these steps to clean the git history and install the dependencies:</p>
+
+```bash
+yarn run reset       # Reset and clean all files you don't need, and clean git history
+yarn install         # Install all dependencies
+```
+
 # Folder Structure
 
 <p>Simple folder structures, no configuration needed, just the files you need:</p>
@@ -70,3 +95,19 @@ Viact
 ├── vite.config.js
 ...
 ```
+
+# Available Scripts
+<p>In this project, you can run the following scripts:</p>
+
+| Script                   | Description                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| yarn run dev             | Runs the app in the development mode. (With HTTPS)                             |
+| yarn run dev:http        | Runs the app in the development mode. (**Without** HTTPS)                      |
+| yarn run build           | Builds the app for production to the `dist` folder.                            |
+| yarn run preview         | Builds the app for production to the `dist` folder, and run locally server.    |
+| yarn run analyze         | Builds the app for production to the `dist` folder, and active analyze mode.   |
+| yarn run reset           | Reset and clean all files you don't need, and clean git history.               |
+| yarn run mock:server     | Run the server for the fake rest API.                                          |
+| yarn run storybook       | Run the documentation for the UI.                                              |
+| yarn run build-storybook | Builds the documentation for the UI.                                           |
+

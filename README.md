@@ -15,20 +15,22 @@
 
 <p>Viact is a minimalist starter template, it includes:</p>
 
--  ⚡️ [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
--  ⚛️ [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces
--  🏄 [React Router DOM](https://reactrouter.com/)https://reactrouter.com/
--  💎 [TypeScript (of course)](https://www.typescriptlang.org/)
--  🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
--  ✅ Safety - Https is enabled by default in development `https://localhost:3000/`
--  🔨 [EsLint](https://eslint.org/) - Pluggable JavaScript linter
--  🌀 [Prettier](https://prettier.io) - Opinionated Code Formatter
--  📭 [PostCss](https://postcss.org/) - Supports RTL for specific styles & autoprefixer (add vendor prefixes)
--  ☄️ [Conventional Commit](https://commitlint.js.org/#/)
--  🎯 Absolute import by using `~/...`
--  ⚙️ Proxying API Requests in Development
--  🔥 The easiest way to mock REST APIs! `json-server`
--  📕 [Storybook](https://storybook.js.org/)
+- ⚡️ [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- ⚛️ [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces
+- 🏄 [React Router DOM](https://reactrouter.com/)https://reactrouter.com/
+- 💎 [TypeScript (of course)](https://www.typescriptlang.org/)
+- 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
+- ✅ Safety - Https is enabled by default in development `https://localhost:3000/`
+- 🔨 [EsLint](https://eslint.org/) - Pluggable JavaScript linter
+- 🌀 [Prettier](https://prettier.io) - Opinionated Code Formatter
+- 📭 [PostCss](https://postcss.org/) - Supports RTL for specific styles & autoprefixer (add vendor prefixes)
+- ☄️ [Conventional Commit](https://commitlint.js.org/#/)
+- 🎯 Absolute import by using `~/...`
+- ⚙️ Proxying API Requests in Development
+- 🔥 The easiest way to mock REST APIs! `json-server`
+- 📕 [Storybook](https://storybook.js.org/)
+- 🗃️ Minify images (image compressor) Automatically (in production)
+- 🖌️ Support Sass/Scss/Less 
 
 # Prerequisites
 -  📦 [Node.js >=16](https://nodejs.org/)
@@ -111,3 +113,77 @@ Viact
 | yarn run storybook       | Run the documentation for the UI.                                              |
 | yarn run build-storybook | Builds the documentation for the UI.                                           |
 
+# UnoCSS
+Plese see this link for more information about UnoCSS:<br />
+[Unocss](https://github.com/unocss/unocss)<br />
+[Let’s Define Exactly What Atomic CSS is](https://css-tricks.com/lets-define-exactly-atomic-css/)<br />
+[Atomic CSS](https://acss.io/)<br />
+[Reimagine Atomic CSS](https://antfu.me/posts/reimagine-atomic-css)<br />
+### The default CSS Preset (Atomic CSS Class)
+As you might know, Tailwind and Windi CSS transform specific class names in the HTML file (or in the JSX or TSX file) to specific property styles as you need them(on-demand). <br />
+A number of rules have been defined for the use of commonly used styles, Which is defined in the following file:
+
+```
+./acss.ts
+```
+
+- Support all utilities styles
+- Support css Pseudo Classes/Elements
+- Support group selectors, like .navbar a {...}
+- Support CSS variables
+
+### Rules:
+- In classNames, spaces cannot be used (because a new class has already been defined). <br />Therefore, the underscore(_) sign should be used instead of a space. We will now replace the underscore(_) sign with a space.
+- **For Group Selectors:**
+	- Group Selectors must start with @
+	- All selectors must end with dollar sign ($)
+	- The classname can only contain one dollar sign ($)
+	**example:**
+	```
+        space between
+              👆
+      @.wrapper_p$fs[16px] => .wrapper p{font-size: 16px;}
+      👇         👇
+      👇    end group selectors
+      👇
+     start group selectors
+	```
+
+#### example
+You can use utility classes in your components and stylesheets as usua.
+
+| ACSS ClassName     | Corresponding CSS                                       |
+| ------------------ | --------------------------------------------------------- |
+| pt-[10]		      | padding-top: 1.5rem; **The default unit is the rem**      |
+| py-[1.5rem]		   | padding-top: 1.5rem; <br /> padding-bottom: 1.5rem;       |
+| bd-[1px_solid_#F5F5F5] | border: 1px solid #F5F5F5; |
+| bdt-[1px_solid_#F5F5F5]  | border-top: 1px solid #F5F5F5;  |
+| br-[10px] |  border-radius: 10px; |
+| bgc-[#fff] | background-color: #fff; |
+| w-[100vw] | width: 100vw; |
+| fs-[1.2em] | font-size: 1.2em |
+| text-[center] | text-align: center |
+| px-[1rem] | padding-left: 1rem; <br /> padding-right: 1rem; |
+| @.navbar_a$fs-[1.4rem] **Group Selectors** | .navbar a { font-size: 1.4rem; } |
+| @.github:hover_svg$fill-[#fff] | .github:hover svg { fill: #fff !important; } |
+| hover:bg[red] **Pseudo Classes** | elem:hover{background: red;} |
+| after:cnt[text] **Pseudo Elements** | elem::after{content: "text"} |
+| root:[--primary:#0d6efd] **Global CSS variables** | :root {--primary: #0d6efd;} |
+| elem:[--primary:#0d6efd] **Local CSS variables** | elem {--primary: #0d6efd;} |
+
+# Set Proxy (If you need)
+For Set Proxy, please see and edit the `proxy` field in file `.vite.config.js`
+
+# Fake REST API (If you need)
+To create mock REST APIs, see the `mock` folder. <br />
+We use `json-server` to create mock REST APIs. Plese see the following link for more information:<br />
+[json-server](https://github.com/typicode/json-server)
+# Checklist
+
+Be sure to follow the checklist when updating your information using this template
+
+- [ ] Change the title in `index.html`
+- [ ] Change the favicon in `./src/assets/images`
+- [ ] Change the `name, description, author, keywords, homepage, repository and bugs` field in `package.json`
+
+And, enjoy :)

@@ -75,6 +75,7 @@ const deleteDir = async (dir) => {
 resetContentFile('/assets/styles/styles.rtl.scss', `${styleRtl.trim()}\n`);
 resetContentFile('/assets/styles/styles.scss', `${style.trim()}\n`);
 resetContentFile('/App.tsx', `${App.trim()}\n`);
+resetContentFile('../README.md', '');
 
 // Delete File
 deleteFile('/assets/images/github.svg');
@@ -82,6 +83,7 @@ deleteFile('/assets/images/minus.svg');
 deleteFile('/assets/images/plus.svg');
 deleteFile('/assets/images/viact.png');
 deleteFile('/assets/images/viact.psd');
+deleteFile('../LICENSE');
 
 // Delete Dir
 deleteDir('/components/Counter');

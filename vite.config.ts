@@ -32,7 +32,13 @@ function renderChunks(deps) {
 export default defineConfig((mode) => {
 	return {
 		plugins: [
-			react(),
+			react({
+				// Removes React Devtools in production build
+				removeDevtoolsInProd: true,
+
+				// Exclude storybook stories
+				exclude: /\.stories\.(t|j)sx?$/,
+			}),
 
 			// legacy(),
 

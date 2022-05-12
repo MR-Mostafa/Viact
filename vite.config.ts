@@ -12,8 +12,6 @@ import Unocss from 'unocss/vite';
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 
-import { dependencies } from './package.json';
-
 const shouldAnalyze = process.env.ANALYZE ?? false;
 const isHttps = process.env.HTTPS ?? false;
 

@@ -17,7 +17,7 @@
 
 - ⚡️ [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 - ⚛️ [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces
-- 🏄 [React Router DOM](https://reactrouter.com/)https://reactrouter.com/
+- 🏄 [React Router DOM](https://reactrouter.com/)
 - 💎 [TypeScript (of course)](https://www.typescriptlang.org/)
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
 - ✅ Safety - Https is enabled by default in development `https://localhost:3000/`
@@ -27,7 +27,7 @@
 - ☄️ [Conventional Commit](https://commitlint.js.org/#/)
 - 🎯 Absolute import by using `~/...`
 - ⚙️ Proxying API Requests in Development
-- 🔥 The easiest way to mock REST APIs! `json-server`
+- 🔥 The easiest way to mock REST APIs! Based on (json-server)[https://github.com/typicode/json-server]
 - 📕 [Storybook](https://storybook.js.org/)
 - 🗃️ Minify images (image compressor) Automatically (in production)
 - 🖌️ Support Sass/Scss/Less 

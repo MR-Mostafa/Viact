@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const srcDir = path.resolve(__dirname, 'src');
 
-if (!srcDir) return;
+if (!srcDir) throw new Error('srcDir is not defined');
 
 const styleRtl = `
 /**
@@ -81,11 +81,11 @@ resetContentFile('../README.md', '');
 deleteFile('/assets/images/github.svg');
 deleteFile('/assets/images/minus.svg');
 deleteFile('/assets/images/plus.svg');
-deleteFile('/assets/images/viact.png');
 deleteFile('/assets/images/viact.psd');
 deleteFile('../LICENSE');
 
 // Delete Dir
+deleteDir('/components/Button');
 deleteDir('/components/Counter');
 deleteDir('/pages/About');
 deleteDir('/pages/Home');

@@ -13,6 +13,7 @@
 		"oderwat.indent-rainbow",
 		"PKief.material-icon-theme",
 		"styled-components.vscode-styled-components",
-		"joshbolduc.commitlint"
+		"joshbolduc.commitlint",
+		"clinyong.vscode-css-modules"
 	]
 }

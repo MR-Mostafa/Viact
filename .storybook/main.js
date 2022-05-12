@@ -5,4 +5,8 @@ module.exports = {
 	core: {
 		builder: '@storybook/builder-vite',
 	},
+	staticDirs: ['../src/assets'],
+	features: {
+		storyStoreV7: true,
+	},
 };

@@ -53,8 +53,8 @@ cd Viact
 <p>After that, follow these steps to clean the git history and install the dependencies:</p>
 
 ```bash
-yarn run reset       # Reset and clean all files you don't need, and clean git history
 yarn install         # Install all dependencies
+yarn run reset       # Reset and clean all files you don't need, and clean git history
 ```
 
 # Folder Structure

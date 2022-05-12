@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { defineConfig } from 'vite';
+import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 import viteImagemin from 'vite-plugin-imagemin';
 import mkcert from 'vite-plugin-mkcert';
 import svgr from 'vite-plugin-svgr';
@@ -11,22 +12,10 @@ import Unocss from 'unocss/vite';
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 
-const { dependencies } = require('./package.json');
+import { dependencies } from './package.json';
 
 const shouldAnalyze = process.env.ANALYZE ?? false;
 const isHttps = process.env.HTTPS ?? false;
-
-function renderChunks(deps) {
-	let chunks = {};
-
-	Object.keys(deps).forEach((key) => {
-		if (['react', 'react-router-dom', 'react-dom'].includes(key)) return;
-
-		chunks[key] = [key];
-	});
-
-	return chunks;
-}
 
 // https://vitejs.dev/config/
 export default defineConfig((mode) => {
@@ -74,17 +63,17 @@ export default defineConfig((mode) => {
 					interlaced: false,
 				},
 			}),
+			chunkSplitPlugin({
+				strategy: 'all-in-one',
+				customSplitting: {
+					'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+				},
+			}),
 		],
 		build: {
 			target: 'es2018',
 			rollupOptions: {
 				plugins: !!shouldAnalyze ? [visualizer({ filename: './dist/_stats.html' })] : [],
-				output: {
-					manualChunks: {
-						'react-vendor': ['react', 'react-router-dom', 'react-dom'],
-						...renderChunks(dependencies),
-					},
-				},
 			},
 			sourcemap: !!shouldAnalyze,
 		},

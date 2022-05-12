@@ -27,7 +27,7 @@
 - ☄️ [Conventional Commit](https://commitlint.js.org/#/)
 - 🎯 Absolute import by using `~/...`
 - ⚙️ Proxying API Requests in Development
-- 🔥 The easiest way to mock REST APIs! `json-server`
+- 🔥 The easiest way to mock REST APIs! Based on (json-server)[https://github.com/typicode/json-server]
 - 📕 [Storybook](https://storybook.js.org/)
 - 🗃️ Minify images (image compressor) Automatically (in production)
 - 🖌️ Support Sass/Scss/Less 

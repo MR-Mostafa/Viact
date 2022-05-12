@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const srcDir = path.resolve(__dirname, 'src');
 
-if (!srcDir) return;
+if (!srcDir) throw new Error('srcDir is not defined');
 
 const styleRtl = `
 /**

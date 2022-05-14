@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const srcDir = path.resolve(__dirname, 'src');
+const srcDir = path.resolve(__dirname);
 
 if (!srcDir) throw new Error('srcDir is not defined');
 
@@ -72,23 +72,23 @@ const deleteDir = async (dir) => {
 };
 
 // Styles
-resetContentFile('/assets/styles/styles.rtl.scss', `${styleRtl.trim()}\n`);
-resetContentFile('/assets/styles/styles.scss', `${style.trim()}\n`);
-resetContentFile('/App.tsx', `${App.trim()}\n`);
-resetContentFile('../README.md', '');
+resetContentFile('/src/assets/styles/styles.rtl.scss', `${styleRtl.trim()}\n`);
+resetContentFile('/src/assets/styles/styles.scss', `${style.trim()}\n`);
+resetContentFile('/src/App.tsx', `${App.trim()}\n`);
+resetContentFile('/README.md', '## Hello World!\n');
 
 // Delete File
-deleteFile('/assets/images/github.svg');
-deleteFile('/assets/images/minus.svg');
-deleteFile('/assets/images/plus.svg');
-deleteFile('/assets/images/viact.psd');
-deleteFile('../LICENSE');
+deleteFile('/src/assets/images/github.svg');
+deleteFile('/src/assets/images/minus.svg');
+deleteFile('/src/assets/images/plus.svg');
+deleteFile('/src/assets/images/viact.psd');
+deleteFile('/LICENSE');
 
 // Delete Dir
-deleteDir('/components/Button');
-deleteDir('/components/Counter');
-deleteDir('/pages/About');
-deleteDir('/pages/Home');
-deleteDir('/pages/LearnMore');
-deleteDir('/sections/Footer');
-deleteDir('/sections/Header');
+deleteDir('/src/components/Button');
+deleteDir('/src/components/Counter');
+deleteDir('/src/pages/About');
+deleteDir('/src/pages/Home');
+deleteDir('/src/pages/LearnMore');
+deleteDir('/src/sections/Footer');
+deleteDir('/src/sections/Header');

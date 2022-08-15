@@ -40,7 +40,6 @@
 		"boilerplate react",
 		"boilerplate react vite"
 	],
-	"packageManager": "yarn@1.22.17",
 	"main": "./src/main.tsx",
 	"scripts": {
 		"reset:git": "rimraf .git && git init && git add . && git commit -m \"init commit\"",

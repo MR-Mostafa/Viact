@@ -16,7 +16,7 @@ const shouldAnalyze = process.env.ANALYZE ?? false;
 const isHttps = process.env.HTTPS ?? false;
 
 // https://vitejs.dev/config/
-export default defineConfig((mode) => {
+export default defineConfig((config: ConfigEnv) => {
 	return {
 		plugins: [
 			react({
@@ -40,13 +40,12 @@ export default defineConfig((mode) => {
 			Unocss(),
 
 			viteImagemin({
-				disable: mode === 'development',
+				disable: config.mode === 'development',
 				mozjpeg: {
 					progressive: true,
 					quality: 80,
 				},
 				optipng: {
-					enabled: true,
 					optimizationLevel: 3,
 				},
 				pngquant: {
